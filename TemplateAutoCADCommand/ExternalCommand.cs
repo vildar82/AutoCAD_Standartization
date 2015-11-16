@@ -17,9 +17,16 @@ namespace AutoCAD_Standartization
       [CommandMethod("Standartization", CommandFlags.Modal)]
       public void Standartization()
       {
-         Log.Info("Start Command Standartization {0}", Assembly.GetExecutingAssembly().GetName().Version);
-         MainForm mf = new MainForm();
-         Autodesk.AutoCAD.ApplicationServices.Application.ShowModalDialog(mf);         
+         try
+         {
+            Log.Info("Start Command Standartization {0}", Assembly.GetExecutingAssembly().GetName().Version);
+            MainForm mf = new MainForm();
+            Autodesk.AutoCAD.ApplicationServices.Application.ShowModalDialog(mf);
+         }
+         catch (System.Exception ex)
+         {
+            Log.Error(ex, "Standartization");
+         }
       }      
    }
 }
