@@ -7,8 +7,8 @@
     <ProjectGuid>{4EB22432-2EF3-4ECC-9C51-77E03175E3A4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AutoCAD_Standartization</RootNamespace>
-    <AssemblyName>AutoCAD_Standartization</AssemblyName>
+    <RootNamespace>Standartization</RootNamespace>
+    <AssemblyName>Standartization</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
