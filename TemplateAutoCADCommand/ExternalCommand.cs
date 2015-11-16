@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AutoCAD_PIK_Manager;
+using System.Reflection;
 
 [assembly: CommandClass(typeof(AutoCAD_Standartization.ExternalCommand))]
 
@@ -15,6 +17,7 @@ namespace AutoCAD_Standartization
       [CommandMethod("Standartization", CommandFlags.Modal)]
       public void Standartization()
       {
+         Log.Info("Start Command Standartization {0}", Assembly.GetExecutingAssembly().GetName().Version);
          MainForm mf = new MainForm();
          Autodesk.AutoCAD.ApplicationServices.Application.ShowModalDialog(mf);         
       }      
