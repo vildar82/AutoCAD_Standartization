@@ -77,7 +77,13 @@ namespace AutoCAD_Standartization
 
             Dictionary<string, List<ObjectId>> result = new Dictionary<string, List<ObjectId>>();
 
+         try
+         {
             foreach (string item in styleNames) result.Add(item.Trim().ToUpper(), new List<ObjectId>());
+         }
+         catch (Exception ex)
+         {            
+         }            
 
 
             using (Transaction t = targetDB.TransactionManager.StartTransaction())
